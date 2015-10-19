@@ -27,5 +27,9 @@ public class RomanNumeralsTest {
         equals(3, "III");
         equals(4, "IV");
         equals(5, "V");
+        equals(6, "VI");
+        equals(7, "VII");
+        equals(8, "VIII");
+        equals(9, "IX");
     }
 }
