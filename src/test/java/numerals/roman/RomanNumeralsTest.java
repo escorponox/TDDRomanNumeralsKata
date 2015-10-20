@@ -11,25 +11,34 @@ public class RomanNumeralsTest {
 
     @Before
     public void setUp() {
-
-        romanNumerals = new RomanNumerals();
+        romanNumerals = new RomanNumeralsImpl();
     }
 
-    private void equals(Integer arabic, String roman) {
+    private void arabicToRomanEquals(Integer arabic, String roman) {
         assertEquals(roman, romanNumerals.arabicToRoman(arabic));
     }
 
     @Test
-    public void facts() throws Exception {
-        equals(0, "");
-        equals(1, "I");
-        equals(2, "II");
-        equals(3, "III");
-        equals(4, "IV");
-        equals(5, "V");
-        equals(6, "VI");
-        equals(7, "VII");
-        equals(8, "VIII");
-        equals(9, "IX");
+    public void arabicToRomanSuite() throws Exception {
+        arabicToRomanEquals(0, "");
+        arabicToRomanEquals(1, "I");
+        arabicToRomanEquals(2, "II");
+        arabicToRomanEquals(3, "III");
+        arabicToRomanEquals(4, "IV");
+        arabicToRomanEquals(5, "V");
+        arabicToRomanEquals(6, "VI");
+        arabicToRomanEquals(7, "VII");
+        arabicToRomanEquals(8, "VIII");
+        arabicToRomanEquals(9, "IX");
+        arabicToRomanEquals(10, "X");
+        arabicToRomanEquals(40, "XL");
+        arabicToRomanEquals(50, "L");
+        arabicToRomanEquals(90, "XC");
+        arabicToRomanEquals(100, "C");
+        arabicToRomanEquals(400, "CD");
+        arabicToRomanEquals(500, "D");
+        arabicToRomanEquals(900, "CM");
+        arabicToRomanEquals(1000, "M");
+        arabicToRomanEquals(1999, "MCMXCIX");
     }
 }

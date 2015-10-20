@@ -1,10 +1,10 @@
 package numerals.roman;
 
-public class RomanNumeral {
+public class SymbolValue {
     private final Integer value;
     private final String symbol;
 
-    public RomanNumeral(Integer value, String symbol) {
+    public SymbolValue(String symbol, Integer value) {
         this.value = value;
         this.symbol = symbol;
     }
